@@ -1,0 +1,51 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 7/8/14 5:01 PM
+Description: Exception in server tick loop
+
+java.lang.NoSuchMethodError: net.minecraft.block.Block.func_149633_g(Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+	at mods.battlegear2.heraldry.BlockFlagPole.func_149633_g(BlockFlagPole.java:77)
+	at mods.battlegear2.heraldry.BlockFlagPole.func_149668_a(BlockFlagPole.java:82)
+	at net.minecraft.world.World.func_147472_a(World.java:3254)
+	at net.minecraft.item.ItemBlock.func_77648_a(ItemBlock.java:98)
+	at net.minecraft.item.ItemStack.func_77943_a(ItemStack.java:126)
+	at net.minecraft.server.management.ItemInWorldManager.func_73078_a(ItemInWorldManager.java:385)
+	at net.minecraft.network.NetHandlerPlayServer.func_147346_a(NetHandlerPlayServer.java:551)
+	at net.minecraft.network.play.client.C08PacketPlayerBlockPlacement.func_148833_a(SourceFile:60)
+	at net.minecraft.network.play.client.C08PacketPlayerBlockPlacement.func_148833_a(SourceFile:9)
+	at net.minecraft.network.NetworkManager.func_74428_b(NetworkManager.java:197)
+	at net.minecraft.network.NetworkSystem.func_151269_c(NetworkSystem.java:165)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:644)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:326)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:531)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:414)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:670)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.2
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_05, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 775808680 bytes (739 MB) / 964165632 bytes (919 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 8809 (493304 bytes; 0 MB) allocated, 8122 (454832 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	FML: MCP v9.03 FML v7.2.213.1133 Minecraft Forge 10.12.2.1133 7 mods loaded, 7 mods active
+	mcp{9.03} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{7.2.213.1133} [Forge Mod Loader] (forge-1.7.2-10.12.2.1133-universal.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{10.12.2.1133} [Minecraft Forge] (forge-1.7.2-10.12.2.1133-universal.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	battlegear2{1.0.5.5} [Mine & Blade Battlegear 2 - Bullseye] (1.7.2-MB_Battlegear2-Bullseye-1.0.5.5.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	AnimationAPI{1.2.1} [AnimationAPI] (AnimationAPI-1.7.2-1.2.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Highlands{2.2.0} [Highlands] (Highlands-1.7.2-v-2.2.0.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MutantCreatures{1.4.5} [Mutant Creatures] (MutantCreatures-1.7.2-1.4.5.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 15685 (878360 bytes; 0 MB) allocated, 8715 (488040 bytes; 0 MB) used
+	Player Count: 1 / 20; [EntityPlayerMP['FusionCarcass'/32040, l='world', x=-2267.81, y=90.00, z=-213.70]]
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)

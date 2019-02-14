@@ -1,0 +1,354 @@
+---- Minecraft Crash Report ----
+// I just don't know what went wrong :(
+
+Time: 4/26/18 11:04 PM
+Description: Watching Server
+
+java.lang.Error
+	at vp.az(SourceFile:2049)
+	at vk$7.a(SourceFile:99)
+	at vk$7.apply(SourceFile:96)
+	at com.google.common.base.Predicates$AndPredicate.apply(Predicates.java:384)
+	at axw.a(SourceFile:713)
+	at amu.a(SourceFile:2282)
+	at vp.cB(SourceFile:1949)
+	at vp.n(SourceFile:1920)
+	at vq.n(SourceFile:501)
+	at ade.n(SourceFile:41)
+	at adt.n(SourceFile:213)
+	at vp.B_(SourceFile:1742)
+	at vq.B_(SourceFile:281)
+	at ade.B_(SourceFile:46)
+	at amu.a(SourceFile:1524)
+	at oo.a(SourceFile:714)
+	at amu.h(SourceFile:1500)
+	at amu.k(SourceFile:1382)
+	at oo.k(SourceFile:547)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:632)
+	at nz.D(SourceFile:349)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:560)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:464)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at vp.az(SourceFile:2049)
+	at vk$7.a(SourceFile:99)
+	at vk$7.apply(SourceFile:96)
+	at com.google.common.base.Predicates$AndPredicate.apply(Predicates.java:384)
+	at axw.a(SourceFile:713)
+	at amu.a(SourceFile:2282)
+	at vp.cB(SourceFile:1949)
+	at vp.n(SourceFile:1920)
+	at vq.n(SourceFile:501)
+	at ade.n(SourceFile:41)
+	at adt.n(SourceFile:213)
+	at vp.B_(SourceFile:1742)
+	at vq.B_(SourceFile:281)
+	at ade.B_(SourceFile:46)
+	at amu.a(SourceFile:1524)
+	at oo.a(SourceFile:714)
+	at amu.h(SourceFile:1500)
+	at amu.k(SourceFile:1382)
+	at oo.k(SourceFile:547)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:632)
+	at nz.D(SourceFile:349)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:560)
+
+-- Thread Dump --
+Details:
+	Threads: "Netty Epoll Server IO #15" Id=145 RUNNABLE
+	at io.netty.util.concurrent.AbstractScheduledEventExecutor.schedule(AbstractScheduledEventExecutor.java:142)
+	at io.netty.handler.timeout.IdleStateHandler.schedule(IdleStateHandler.java:349)
+	at io.netty.handler.timeout.IdleStateHandler.initialize(IdleStateHandler.java:325)
+	at io.netty.handler.timeout.IdleStateHandler.handlerAdded(IdleStateHandler.java:245)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:226)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:192)
+	at oz$4.initChannel(SourceFile:112)
+	...
+
+
+"Netty Epoll Server IO #14" Id=135 RUNNABLE
+	at io.netty.util.concurrent.AbstractScheduledEventExecutor.schedule(AbstractScheduledEventExecutor.java:142)
+	at io.netty.handler.timeout.IdleStateHandler.schedule(IdleStateHandler.java:349)
+	at io.netty.handler.timeout.IdleStateHandler.initialize(IdleStateHandler.java:325)
+	at io.netty.handler.timeout.IdleStateHandler.handlerAdded(IdleStateHandler.java:245)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:226)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:192)
+	at oz$4.initChannel(SourceFile:112)
+	...
+
+
+"Netty Epoll Server IO #13" Id=134 RUNNABLE
+	at io.netty.util.concurrent.AbstractScheduledEventExecutor.schedule(AbstractScheduledEventExecutor.java:142)
+	at io.netty.handler.timeout.IdleStateHandler.schedule(IdleStateHandler.java:349)
+	at io.netty.handler.timeout.IdleStateHandler.initialize(IdleStateHandler.java:325)
+	at io.netty.handler.timeout.IdleStateHandler.handlerAdded(IdleStateHandler.java:245)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:226)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:192)
+	at oz$4.initChannel(SourceFile:112)
+	...
+
+
+"Netty Epoll Server IO #12" Id=133 RUNNABLE
+	at io.netty.util.concurrent.AbstractScheduledEventExecutor.schedule(AbstractScheduledEventExecutor.java:142)
+	at io.netty.handler.timeout.IdleStateHandler.schedule(IdleStateHandler.java:349)
+	at io.netty.handler.timeout.IdleStateHandler.initialize(IdleStateHandler.java:325)
+	at io.netty.handler.timeout.IdleStateHandler.handlerAdded(IdleStateHandler.java:245)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:226)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:192)
+	at oz$4.initChannel(SourceFile:112)
+	...
+
+
+"Netty Epoll Server IO #11" Id=132 RUNNABLE
+	at io.netty.util.concurrent.AbstractScheduledEventExecutor.schedule(AbstractScheduledEventExecutor.java:142)
+	at io.netty.handler.timeout.IdleStateHandler.schedule(IdleStateHandler.java:349)
+	at io.netty.handler.timeout.IdleStateHandler.initialize(IdleStateHandler.java:325)
+	at io.netty.handler.timeout.IdleStateHandler.handlerAdded(IdleStateHandler.java:245)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:226)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:192)
+	at oz$4.initChannel(SourceFile:112)
+	...
+
+
+"Netty Epoll Server IO #10" Id=129 RUNNABLE
+	at gy.readerIndex(SourceFile:425)
+	at gy.e(SourceFile:336)
+	at md.a(SourceFile:34)
+	at gz.decode(SourceFile:40)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	...
+
+
+"Netty Epoll Server IO #9" Id=126 RUNNABLE
+	at io.netty.util.concurrent.AbstractScheduledEventExecutor.schedule(AbstractScheduledEventExecutor.java:142)
+	at io.netty.handler.timeout.IdleStateHandler.schedule(IdleStateHandler.java:349)
+	at io.netty.handler.timeout.IdleStateHandler.initialize(IdleStateHandler.java:325)
+	at io.netty.handler.timeout.IdleStateHandler.handlerAdded(IdleStateHandler.java:245)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:226)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:192)
+	at oz$4.initChannel(SourceFile:112)
+	...
+
+
+"Netty Epoll Server IO #8" Id=119 RUNNABLE
+	at hc.decode(SourceFile:33)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at ox.channelRead(SourceFile:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	...
+
+
+"Netty Epoll Server IO #7" Id=118 RUNNABLE
+	at io.netty.util.concurrent.AbstractScheduledEventExecutor.schedule(AbstractScheduledEventExecutor.java:142)
+	at io.netty.handler.timeout.IdleStateHandler.schedule(IdleStateHandler.java:349)
+	at io.netty.handler.timeout.IdleStateHandler.initialize(IdleStateHandler.java:325)
+	at io.netty.handler.timeout.IdleStateHandler.handlerAdded(IdleStateHandler.java:245)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:226)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:192)
+	at oz$4.initChannel(SourceFile:112)
+	...
+
+
+"Netty Epoll Server IO #6" Id=113 RUNNABLE
+	at io.netty.util.concurrent.AbstractScheduledEventExecutor.schedule(AbstractScheduledEventExecutor.java:142)
+	at io.netty.handler.timeout.IdleStateHandler.schedule(IdleStateHandler.java:349)
+	at io.netty.handler.timeout.IdleStateHandler.initialize(IdleStateHandler.java:325)
+	at io.netty.handler.timeout.IdleStateHandler.handlerAdded(IdleStateHandler.java:245)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:226)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:192)
+	at oz$4.initChannel(SourceFile:112)
+	...
+
+
+"Netty Epoll Server IO #5" Id=109 RUNNABLE
+	at io.netty.util.concurrent.AbstractScheduledEventExecutor.schedule(AbstractScheduledEventExecutor.java:142)
+	at io.netty.handler.timeout.IdleStateHandler.schedule(IdleStateHandler.java:349)
+	at io.netty.handler.timeout.IdleStateHandler.initialize(IdleStateHandler.java:325)
+	at io.netty.handler.timeout.IdleStateHandler.handlerAdded(IdleStateHandler.java:245)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:226)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:192)
+	at oz$4.initChannel(SourceFile:112)
+	...
+
+
+"Netty Epoll Server IO #4" Id=108 RUNNABLE
+	at io.netty.util.Recycler.get(Recycler.java:154)
+	at io.netty.handler.codec.CodecOutputList.newInstance(CodecOutputList.java:38)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:239)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:280)
+	...
+
+
+"Netty Epoll Server IO #3" Id=103 RUNNABLE
+	at io.netty.util.concurrent.AbstractScheduledEventExecutor.schedule(AbstractScheduledEventExecutor.java:142)
+	at io.netty.handler.timeout.IdleStateHandler.schedule(IdleStateHandler.java:349)
+	at io.netty.handler.timeout.IdleStateHandler.initialize(IdleStateHandler.java:325)
+	at io.netty.handler.timeout.IdleStateHandler.handlerAdded(IdleStateHandler.java:245)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:226)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:192)
+	at oz$4.initChannel(SourceFile:112)
+	...
+
+
+"Netty Epoll Server IO #2" Id=102 RUNNABLE
+	at gy.readerIndex(SourceFile:425)
+	at gy.e(SourceFile:336)
+	at md.a(SourceFile:34)
+	at gz.decode(SourceFile:40)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	...
+
+
+"threadDeathWatcher-2-1" Id=98 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at io.netty.util.ThreadDeathWatcher$Watcher.run(ThreadDeathWatcher.java:152)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Epoll Server IO #1" Id=97 RUNNABLE
+	at gy.readerIndex(SourceFile:425)
+	at gy.e(SourceFile:336)
+	at md.a(SourceFile:34)
+	at gz.decode(SourceFile:40)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	...
+
+
+"File IO Thread" Id=22 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at bgx.c(SourceFile:44)
+	at bgx.run(SourceFile:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Server Watchdog" Id=20 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:454)
+	at oa.run(SourceFile:43)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Epoll Server IO #0" Id=19 RUNNABLE
+	at io.netty.channel.epoll.EpollRecvByteAllocatorHandle.lastBytesRead(EpollRecvByteAllocatorHandle.java:96)
+	at io.netty.channel.epoll.AbstractEpollServerChannel$EpollServerSocketUnsafe.epollInReady(AbstractEpollServerChannel.java:130)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe$1.run(AbstractEpollChannel.java:335)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:304)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Server console handler" Id=18 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	-  locked java.io.BufferedInputStream@3847d69
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	-  locked java.io.InputStreamReader@d438369
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	...
+
+
+"DestroyJavaVM" Id=17 RUNNABLE
+
+
+"Server thread" Id=15 RUNNABLE
+	at vp.az(SourceFile:2049)
+	at vk$7.a(SourceFile:99)
+	at vk$7.apply(SourceFile:96)
+	at com.google.common.base.Predicates$AndPredicate.apply(Predicates.java:384)
+	at axw.a(SourceFile:713)
+	at amu.a(SourceFile:2282)
+	at vp.cB(SourceFile:1949)
+	at vp.n(SourceFile:1920)
+	...
+
+
+"Server Infinisleeper" Id=14 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at nz$1.run(SourceFile:84)
+
+
+"Snooper Timer" Id=13 TIMED_WAITING on java.util.TaskQueue@97c1619
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@97c1619
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@4c7e8952
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@4c7e8952
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:212)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@6c31ca81
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@6c31ca81
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+
+
+Stacktrace:
+	at oa.run(SourceFile:59)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Linux (amd64) version 4.4.0-62-generic
+	Java Version: 1.8.0_162, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1228602320 bytes (1171 MB) / 1566572544 bytes (1494 MB) up to 2863661056 bytes (2731 MB)
+	JVM Flags: 2 total; -Xms512M -Xmx3072M
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 20; []
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

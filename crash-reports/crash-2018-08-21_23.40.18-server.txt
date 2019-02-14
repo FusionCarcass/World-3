@@ -1,0 +1,222 @@
+---- Minecraft Crash Report ----
+// Why did you do that?
+
+Time: 8/21/18 11:40 PM
+Description: Watching Server
+
+java.lang.Error
+	at com.google.common.collect.SingletonImmutableBiMap.get(SingletonImmutableBiMap.java:55)
+	at bkr.a(SourceFile:104)
+	at byl.a(SourceFile:205)
+	at bfl.h(SourceFile:66)
+	at bkt.s(SourceFile:321)
+	at bnb.b(SourceFile:38)
+	at bna.b(SourceFile:395)
+	at bna.b(SourceFile:387)
+	at aye.b(SourceFile:243)
+	at cay.a(SourceFile:89)
+	at cay.b(SourceFile:70)
+	at cay.a(SourceFile:36)
+	at cax.a(SourceFile:86)
+	at cax.a(SourceFile:44)
+	at cax.a(SourceFile:34)
+	at ait.b(SourceFile:128)
+	at ait.a(SourceFile:107)
+	at ait.a(SourceFile:157)
+	at aho.c(SourceFile:67)
+	at agr.a(SourceFile:102)
+	at aey.cM(SourceFile:630)
+	at aex.k(SourceFile:1944)
+	at aey.k(SourceFile:495)
+	at ajk.k(SourceFile:190)
+	at aex.R_(SourceFile:1795)
+	at aey.R_(SourceFile:279)
+	at ajk.R_(SourceFile:151)
+	at axs.a(SourceFile:1240)
+	at tc.a(SourceFile:581)
+	at axs.g(SourceFile:1215)
+	at axs.o_(SourceFile:1097)
+	at tc.o_(SourceFile:497)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:731)
+	at sn.w(SourceFile:357)
+	at net.minecraft.server.MinecraftServer.v(SourceFile:656)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:559)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at com.google.common.collect.SingletonImmutableBiMap.get(SingletonImmutableBiMap.java:55)
+	at bkr.a(SourceFile:104)
+	at byl.a(SourceFile:205)
+	at bfl.h(SourceFile:66)
+	at bkt.s(SourceFile:321)
+	at bnb.b(SourceFile:38)
+	at bna.b(SourceFile:395)
+	at bna.b(SourceFile:387)
+	at aye.b(SourceFile:243)
+	at cay.a(SourceFile:89)
+	at cay.b(SourceFile:70)
+	at cay.a(SourceFile:36)
+	at cax.a(SourceFile:86)
+	at cax.a(SourceFile:44)
+	at cax.a(SourceFile:34)
+	at ait.b(SourceFile:128)
+	at ait.a(SourceFile:107)
+	at ait.a(SourceFile:157)
+	at aho.c(SourceFile:67)
+	at agr.a(SourceFile:102)
+	at aey.cM(SourceFile:630)
+	at aex.k(SourceFile:1944)
+	at aey.k(SourceFile:495)
+	at ajk.k(SourceFile:190)
+	at aex.R_(SourceFile:1795)
+	at aey.R_(SourceFile:279)
+	at ajk.R_(SourceFile:151)
+	at axs.a(SourceFile:1240)
+	at tc.a(SourceFile:581)
+	at axs.g(SourceFile:1215)
+	at axs.o_(SourceFile:1097)
+	at tc.o_(SourceFile:497)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:731)
+	at sn.w(SourceFile:357)
+	at net.minecraft.server.MinecraftServer.v(SourceFile:656)
+
+-- Thread Dump --
+Details:
+	Threads: "WorldGen-Scheduler-1" Id=27 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@17dd0fc2
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@17dd0fc2
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Epoll Server IO #1" Id=23 RUNNABLE
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"File IO Thread" Id=22 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at cdl.c(SourceFile:56)
+	at cdl.run(SourceFile:35)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Server Watchdog" Id=21 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:454)
+	at so.run(SourceFile:45)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Epoll Server IO #0" Id=20 RUNNABLE
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"ObjectCleanerThread" Id=19 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@191ae349
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@191ae349
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	at io.netty.util.internal.ObjectCleaner$1.run(ObjectCleaner.java:54)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Server console handler" Id=18 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	-  locked java.io.BufferedInputStream@1d2564b2
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	-  locked java.io.InputStreamReader@5827e972
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	...
+
+
+"DestroyJavaVM" Id=17 RUNNABLE
+
+
+"Server thread" Id=15 RUNNABLE
+	at com.google.common.collect.SingletonImmutableBiMap.get(SingletonImmutableBiMap.java:55)
+	at bkr.a(SourceFile:104)
+	at byl.a(SourceFile:205)
+	at bfl.h(SourceFile:66)
+	at bkt.s(SourceFile:321)
+	at bnb.b(SourceFile:38)
+	at bna.b(SourceFile:395)
+	at bna.b(SourceFile:387)
+	...
+
+
+"Server Infinisleeper" Id=14 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at sn$1.run(SourceFile:91)
+
+
+"Snooper Timer" Id=13 WAITING on java.util.TaskQueue@27fb5eab
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@27fb5eab
+	at java.lang.Object.wait(Object.java:502)
+	at java.util.TimerThread.mainLoop(Timer.java:526)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=5 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@6935f1b6
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@6935f1b6
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@5f0318d6
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@5f0318d6
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+
+
+Stacktrace:
+	at so.run(SourceFile:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.13
+	Operating System: Linux (amd64) version 4.4.0-62-generic
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1004535784 bytes (957 MB) / 2147483648 bytes (2048 MB) up to 4294967296 bytes (4096 MB)
+	JVM Flags: 8 total; -Xms2048M -Xmx4096M -XX:+UseG1GC -XX:+CMSIncrementalPacing -XX:+CMSClassUnloadingEnabled -XX:ParallelGCThreads=4 -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 20; [te['FusionCarcass'/464, l='world', x=-2298.55, y=197.00, z=-217.31]]
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
