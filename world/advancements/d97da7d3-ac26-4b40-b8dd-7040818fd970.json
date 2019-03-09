@@ -41,15 +41,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/magenta_dye_from_lilac": {
-    "criteria": {
-      "has_double_plant": "2018-05-15 21:06:16 -0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/light_blue_dye_from_blue_orchid": {
     "criteria": {
       "has_red_flower": "2018-05-15 21:06:16 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/magenta_dye_from_lilac": {
+    "criteria": {
+      "has_double_plant": "2018-05-15 21:06:16 -0500"
     },
     "done": true
   },
@@ -448,13 +448,13 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/light_gray_concrete_powder": {
+  "minecraft:recipes/building_blocks/light_blue_concrete_powder": {
     "criteria": {
       "has_gravel": "2018-04-20 20:15:52 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/light_blue_concrete_powder": {
+  "minecraft:recipes/building_blocks/light_gray_concrete_powder": {
     "criteria": {
       "has_gravel": "2018-04-20 20:15:52 -0500"
     },
@@ -819,13 +819,13 @@
     },
     "done": true
   },
-  "minecraft:recipes/tools/diamond_pickaxe": {
+  "minecraft:recipes/tools/diamond_hoe": {
     "criteria": {
       "has_diamond": "2018-04-21 20:30:40 -0500"
     },
     "done": true
   },
-  "minecraft:recipes/tools/diamond_hoe": {
+  "minecraft:recipes/tools/diamond_pickaxe": {
     "criteria": {
       "has_diamond": "2018-04-21 20:30:40 -0500"
     },
@@ -1180,15 +1180,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/tools/stone_shovel": {
-    "criteria": {
-      "has_cobblestone": "2018-04-18 20:57:12 -0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/combat/wooden_sword": {
     "criteria": {
       "has_stick": "2018-04-18 20:57:12 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_shovel": {
+    "criteria": {
+      "has_cobblestone": "2018-04-18 20:57:12 -0500"
     },
     "done": true
   },
@@ -1458,8 +1458,8 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:forest": "2018-04-21 12:14:01 -0500",
       "minecraft:mountains": "2018-04-18 20:57:14 -0500",
+      "minecraft:forest": "2018-04-21 12:14:01 -0500",
       "minecraft:taiga": "2018-04-18 20:58:22 -0500",
       "minecraft:taiga_hills": "2018-04-21 20:14:25 -0500",
       "minecraft:beach": "2018-05-07 16:49:32 -0500",
